@@ -1,0 +1,181 @@
+body{
+	background: black;
+}
+
+#igra{
+	/*колір фону*/
+	background: #505050;
+	/*ширина*/
+	width: 600px;
+	/*висота*/
+	height: 400px;
+	/*відступ зверху і по бокам*/
+	margin: 0 auto;
+	top: 20px;
+	left: 0px;
+	/*позиціонування відносно блоку igra*/
+	position: relative;
+	/*рамка*/
+	border: 2px solid grey;
+	overflow: hidden;
+}
+
+.ball{
+	/*колір фону*/
+	background: blue;
+	/*висота*/
+	width: 50px;
+	/*ширина*/
+	height: 50px;
+	/*радіус*/
+	border-radius: 50%;
+	position: absolute;
+	/*розміщення за межами ігрового поля*/
+	top: -100px; /* 0 => 400 - 50 = 350*/
+	left: -100px;/* 0 => 600 - 50 = 550*/
+	/*приховати блок*/
+	display: block;
+	/*затримка змінення стилів*/
+	transition: all 1s;
+}
+
+.left{
+	top: 500px;
+	left: -100px;
+}
+
+.right{
+	top: 500px;
+	left: 700px;
+}
+
+#stars{
+	/*розмір шрифту*/
+	font-size: 34px;
+	/*колір*/
+	color: white;
+	/*жирний текст*/
+	font-weight: bold;
+	/*відступ зверху і по бокам*/
+	position: absolute;
+	/*відступ зверху*/
+	top: 10px;
+	/*відступ зліва*/
+	left: 20px;	
+}
+
+#lifes{
+	position: absolute;
+	/*відступ зверху*/
+	top: 20px;
+	/*відступ зправа*/
+	right: 20px;
+}
+
+#lifes span{
+	/*ширина*/
+	width: 20px;
+	/*висота*/
+	height: 20px;
+	/*радіус*/
+	border-radius: 50%;
+	/*рамка*/
+	border: 3px solid #fff;
+	/*колір фону*/
+	background: pink;
+	/*блочний елемент*/
+	display: block;
+	/*плаваючий елемент, прилипне до верхнього елементу*/
+	float: left;
+}
+
+#start-block {
+	/*ширина*/
+	width: 100%;
+	/*висота*/
+	height: 100%;
+	/*колір фону*/
+	background:  url("../img/8.jpg") no-repeat;
+	background-size: 100%;
+	position: absolute;
+	/*відступ зверху*/
+	top: 0;
+	/*відступ зліва*/
+	left: 0;
+}
+
+#start-block button{
+  	position: absolute;
+  	display: inline-block;
+  	top: 155px;
+  	left: 223px;
+  	font-size: 24px;
+  	font-weight: 700; /*жирне*/
+  	color: hsl(0, 0%, 100%);
+  	text-shadow: rgba(255,255,255,.5) 0 -1px 0, rgba(0,0,0,.3) 0 .18em .15em; /*створення тіні*/
+  	text-decoration: none;
+ 	user-select: none;
+  	padding: .7em .8em .6em .8em;
+  	border-radius: 8px;
+  	border: 1px solid rgba(255,255,255,.1);
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	outline: none;
+	background: #a2cf70 radial-gradient(rgba(255,255,255,0), rgba(255,255,255,.5));
+	box-shadow:
+  	inset rgba(255,255,255,.6) 0 .3em .3em,
+  	inset rgba(0,0,0,.2) 0 -.1em .3em,
+  	rgb(128,161,103) 0 7px 1px,
+  	rgba(0,0,0,.2) 0 .5em 5px;
+  	transition: background .2s ease-in-out;
+}
+#start-block button:hover {
+  	background-color: hsl(88, 70%, 75%);
+}
+#start-block button:active {
+  	top: 150px;
+  	color: rgba(254,255,255,.9);
+  	text-shadow: rgba(0,0,0,.2) 0 1px 2px;
+	box-shadow:
+  	inset rgba(255,255,255,.6) 0 .3em .3em,
+   	inset rgba(0,0,0,.2) 0 -.1em .3em,
+   	rgba(0,0,0,.4) 0 .1em 1px,
+   	rgba(0,0,0,.3) 0 .2em 6px;
+}
+#start-block button:after {
+  	content:  "";
+  	position:  absolute; 
+  	width:   90%;
+  	height:  60%;
+  	top:   0;
+  	left:   5%;    
+  	border-radius:    .5em .5em 1em 1em / .5em .5em 2em 2em;
+  	background-image: linear-gradient(rgba(255,255,255,.55), rgba(255,255,255,.3)); 
+}
+#start-block button:active:after {
+  	opacity: .6;
+}
+
+#info-block{
+	color: white;
+	padding: 10px;
+}
+
+#finish{
+	/*ширина*/
+	width: 100%;
+	/*висота*/
+    height: 100%;
+    position: absolute;
+    /*відступ зверху*/
+    top: 0;
+    /*відступ зліва*/
+    left: 0;
+    /*колір фону*/
+    background: #296ca7;
+    /*колір тексту*/
+    color: white;
+    /*розміщення тексту по центрі*/
+    text-align: center;
+    /*розмір шрифту*/
+    font-size: 40px;
+}
